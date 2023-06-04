@@ -2,7 +2,7 @@
 import React from "react";
 
 export default function Home() {
-  const RESET = 10;
+  const RESET = 5;
   const TIMEOUT_FIFTEEN = 900000;
   const TIMEOUT_THIRTY = 1800000;
   const TIMEOUT_FORTY_FIVE = 2700000;
@@ -16,25 +16,22 @@ export default function Home() {
   const timer = React.useRef<NodeJS.Timeout>();
   const uninteruptedTimer = React.useRef<NodeJS.Timeout>();
 
+  const computeWordCount = () => {
+    return text.split(" ").length - 1;
+  };
+
   const computeBlur = () => {
     switch (timeSinceLasthandleKeyDown) {
       case 0:
       case 1:
       case 2:
-      case 3:
-      case 4:
-      case 5:
         return "blur-[0px]";
-      case 6:
+      case 3:
         return "blur-[1px]";
-      case 7:
+      case 4:
         return "blur-[2px]";
-      case 8:
-        return "blur-[3px]";
-      case 9:
+      case 5:
         return "blur-[4px]";
-      case 10:
-        return "blur-[5px]";
     }
   };
 
@@ -96,6 +93,7 @@ export default function Home() {
       <h1 className="text-lime-500">
         Zach is super awesome, Happy 30th Bday Zach!!!!11
       </h1>
+      <p>Word Count: {computeWordCount()}</p>
       <div className="relative flex">
         <button
           onClick={() => handleTimeoutChange(TIMEOUT_FIFTEEN)}

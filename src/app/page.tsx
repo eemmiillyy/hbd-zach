@@ -93,7 +93,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-zinc-900">
-      <h1 className="text-lime-500">Zach is super awesome, HBD Zach!!!!11</h1>
+      <h1 className="text-lime-500">
+        Zach is super awesome, Happy 30th Bday Zach!!!!11
+      </h1>
       <div className="relative flex">
         <button
           onClick={() => handleTimeoutChange(TIMEOUT_FIFTEEN)}

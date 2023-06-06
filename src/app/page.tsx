@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Home() {
   const RESET = 5;
-  const TIMEOUT_FIFTEEN = 900000;
-  const TIMEOUT_THIRTY = 1800000;
-  const TIMEOUT_FORTY_FIVE = 2700000;
-  const TIMEOUT_SIXTY = 3600000;
+  const TIMEOUT_FIFTEEN = 900;
+  const TIMEOUT_THIRTY = 1800;
+  const TIMEOUT_FORTY_FIVE = 2700;
+  const TIMEOUT_SIXTY = 3600;
   const [timeout, setTimeout] = React.useState<number>(TIMEOUT_FIFTEEN);
   const [timeSinceLasthandleKeyDown, settimeSinceLasthandleKeyDown] =
     React.useState(0);
